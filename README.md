@@ -1,6 +1,11 @@
+## Overview
+An easy and simple way to configure react-native-web with babel and webpack.
+
+Note: TicTacToe.js is taken simply as a working example
+
 ## Motivation
 
-An easy and simple way to configure react-native-web with babel and webpack.
+https://github.com/necolas/react-native-web/issues/157
 
 ## Installation
 
