@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/zetta/.nvm/versions/node/v6.9.2/bin/node',
+1 verbose cli   '/home/zetta/.nvm/versions/node/v6.9.2/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '--save',
+1 verbose cli   'react-web' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly rollbackFailedOptional Starting
+8 silly rollbackFailedOptional Finishing
+9 silly runTopLevelLifecycles Finishing
+10 silly install printInstalled
+11 verbose stack Error: Failed to parse json
+11 verbose stack Unexpected token '"' at 20:5
+11 verbose stack     "es2015",
+11 verbose stack     ^
+11 verbose stack     at parseError (/home/zetta/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
+11 verbose stack     at parseJson (/home/zetta/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:79:23)
+11 verbose stack     at /home/zetta/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+11 verbose stack     at /home/zetta/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+11 verbose stack     at tryToString (fs.js:455:3)
+11 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
+12 verbose cwd /home/zetta/develop/react-native-web-boilerplate
+13 error Linux 4.4.0-66-generic
+14 error argv "/home/zetta/.nvm/versions/node/v6.9.2/bin/node" "/home/zetta/.nvm/versions/node/v6.9.2/bin/npm" "i" "--save" "react-web"
+15 error node v6.9.2
+16 error npm  v3.10.9
+17 error file /home/zetta/develop/react-native-web-boilerplate/package.json
+18 error code EJSONPARSE
+19 error Failed to parse json
+19 error Unexpected token '"' at 20:5
+19 error     "es2015",
+19 error     ^
+20 error File: /home/zetta/develop/react-native-web-boilerplate/package.json
+21 error Failed to parse package.json data.
+21 error package.json must be actual JSON, not just JavaScript.
+21 error
+21 error This is not a bug in npm.
+21 error Tell the package author to fix their package.json file. JSON.parse
+22 verbose exit [ 1, true ]
