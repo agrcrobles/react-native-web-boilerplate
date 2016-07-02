@@ -4,8 +4,8 @@ An easy and simple way to configure react-native-web with babel and webpack.
 
 ## Installation
 
-1.`npm start`
-2.`http://localhost:8080/``
+1. `npm start`
+2. Open `http://localhost:8080/``
 
 ## API Reference
 
