@@ -25,11 +25,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
-    // https://github.com/animatedjs/animated/issues/40
-    new webpack.NormalModuleReplacementPlugin(
-      /es6-set/,
-      path.join(__dirname, '/node_modules/react-native-web/dist/modules/polyfills/Set.js')
-    ),
     new webpack.optimize.OccurenceOrderPlugin()
   ],
   resolve: {
