@@ -1,24 +1,23 @@
-const path = require('path')
-const webpack = require('webpack')
+const webpack = require('webpack');
 
-const EXAMPLES_DIRECTORY = __dirname
+const EXAMPLES_DIRECTORY = __dirname;
 
 module.exports = {
   devServer: {
     contentBase: EXAMPLES_DIRECTORY,
-		// enable HMR
-		hot: true,
-		// embed the webpack-dev-server runtime into the bundle
-		inline: true,
-		// serve index.html in place of 404 responses to allow HTML5 history
-		historyApiFallback: true,
-		port: 3000
+    // enable HMR
+    hot: true,
+    // embed the webpack-dev-server runtime into the bundle
+    inline: true,
+    // serve index.html in place of 404 responses to allow HTML5 history
+    historyApiFallback: true,
+    port: 3000
   },
   devtool: 'source-map',
   entry: [
- 		'webpack-dev-server/client?http://localhost:3000',
-		'webpack/hot/only-dev-server',
-		'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    'react-hot-loader/patch',
     EXAMPLES_DIRECTORY
   ],
   module: {
@@ -32,7 +31,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'bundle.js'
+    filename: 'build/bundle.js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -44,4 +43,4 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   }
-}
+};

@@ -16,14 +16,14 @@
  */
 'use strict';
 
-var React = require('react');
-var ReactNative = require('react-native');
-var {
+const React = require('react');
+const ReactNative = require('react-native');
+const {
   AppRegistry,
   StyleSheet,
   Text,
   TouchableHighlight,
-  View,
+  View
 } = ReactNative;
 
 class Board {
@@ -31,11 +31,11 @@ class Board {
   turn: number;
 
   constructor() {
-    var size = 3;
-    var grid = Array(size);
-    for (var i = 0; i < size; i++) {
-      var row = Array(size);
-      for (var j = 0; j < size; j++) {
+    const size = 3;
+    const grid = Array(size);
+    for (let i = 0; i < size; i++) {
+      const row = Array(size);
+      for (let j = 0; j < size; j++) {
         row[j] = 0;
       }
       grid[i] = row;
@@ -55,14 +55,14 @@ class Board {
   }
 
   winner(): ?number {
-    for (var i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
       if (this.grid[i][0] !== 0 && this.grid[i][0] === this.grid[i][1] &&
           this.grid[i][0] === this.grid[i][2]) {
         return this.grid[i][0];
       }
     }
 
-    for (var i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
       if (this.grid[0][i] !== 0 && this.grid[0][i] === this.grid[1][i] &&
           this.grid[0][i] === this.grid[2][i]) {
         return this.grid[0][i];
@@ -83,8 +83,8 @@ class Board {
   }
 
   tie(): boolean {
-    for (var i = 0; i < 3; i++) {
-      for (var j = 0; j < 3; j++) {
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
         if (this.grid[i][j] === 0) {
           return false;
         }
@@ -94,7 +94,7 @@ class Board {
   }
 }
 
-var Cell = React.createClass({
+const Cell = React.createClass({
   cellStyle() {
     switch (this.props.player) {
       case 1:
@@ -132,10 +132,10 @@ var Cell = React.createClass({
     return (
       <TouchableHighlight
         onPress={this.props.onPress}
-        underlayColor="transparent"
+        underlayColor='transparent'
         activeOpacity={0.5}>
-        <View style={[styles.cell, this.cellStyle()]}>
-          <Text style={[styles.cellText, this.textStyle()]}>
+        <View style={[ styles.cell, this.cellStyle() ]}>
+          <Text style={[ styles.cellText, this.textStyle() ]}>
             {this.textContents()}
           </Text>
         </View>
@@ -144,17 +144,17 @@ var Cell = React.createClass({
   }
 });
 
-var GameEndOverlay = React.createClass({
+const GameEndOverlay = React.createClass({
   render() {
-    var board = this.props.board;
+    const board = this.props.board;
 
-    var tie = board.tie();
-    var winner = board.winner();
+    const tie = board.tie();
+    const winner = board.winner();
     if (!winner && !tie) {
       return <View />;
     }
 
-    var message;
+    let message;
     if (tie) {
       message = 'It\'s a tie!';
     } else {
@@ -166,7 +166,7 @@ var GameEndOverlay = React.createClass({
         <Text style={styles.overlayMessage}>{message}</Text>
         <TouchableHighlight
           onPress={this.props.onRestart}
-          underlayColor="transparent"
+          underlayColor='transparent'
           activeOpacity={0.5}>
           <View style={styles.newGame}>
             <Text style={styles.newGameText}>New Game</Text>
@@ -177,7 +177,7 @@ var GameEndOverlay = React.createClass({
   }
 });
 
-var TicTacToeApp = React.createClass({
+const TicTacToeApp = React.createClass({
   getInitialState() {
     return { board: new Board(), player: 1 };
   },
@@ -197,12 +197,12 @@ var TicTacToeApp = React.createClass({
 
     this.setState({
       board: this.state.board.mark(row, col, this.state.player),
-      player: this.nextPlayer(),
+      player: this.nextPlayer()
     });
   },
 
   render() {
-    var rows = this.state.board.grid.map((cells, row) =>
+    const rows = this.state.board.grid.map((cells, row) =>
       <View key={'row' + row} style={styles.row}>
         {cells.map((player, col) =>
           <Cell
@@ -229,7 +229,7 @@ var TicTacToeApp = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -239,15 +239,15 @@ var styles = StyleSheet.create({
   title: {
     fontFamily: 'Chalkduster',
     fontSize: 39,
-    marginBottom: 20,
+    marginBottom: 20
   },
   board: {
     padding: 5,
     backgroundColor: '#47525d',
-    borderRadius: 10,
+    borderRadius: 10
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
 
   // CELL
@@ -260,13 +260,13 @@ var styles = StyleSheet.create({
     margin: 5,
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   cellX: {
-    backgroundColor: '#72d0eb',
+    backgroundColor: '#72d0eb'
   },
   cellO: {
-    backgroundColor: '#7ebd26',
+    backgroundColor: '#7ebd26'
   },
 
   // CELL TEXT
@@ -274,13 +274,13 @@ var styles = StyleSheet.create({
   cellText: {
     borderRadius: 5,
     fontSize: 50,
-    fontFamily: 'AvenirNext-Bold',
+    fontFamily: 'AvenirNext-Bold'
   },
   cellTextX: {
-    color: '#19a9e5',
+    color: '#19a9e5'
   },
   cellTextO: {
-    color: '#b9dc2f',
+    color: '#b9dc2f'
   },
 
   // GAME OVER
@@ -295,7 +295,7 @@ var styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   overlayMessage: {
     fontSize: 40,
@@ -303,18 +303,18 @@ var styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     fontFamily: 'AvenirNext-DemiBold',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   newGame: {
     backgroundColor: '#887765',
     padding: 20,
-    borderRadius: 5,
+    borderRadius: 5
   },
   newGameText: {
     color: 'white',
     fontSize: 20,
-    fontFamily: 'AvenirNext-DemiBold',
-  },
+    fontFamily: 'AvenirNext-DemiBold'
+  }
 });
 
 AppRegistry.registerComponent('TicTacToeApp', () => TicTacToeApp);
