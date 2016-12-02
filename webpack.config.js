@@ -5,11 +5,22 @@ const EXAMPLES_DIRECTORY = __dirname
 
 module.exports = {
   devServer: {
-    contentBase: EXAMPLES_DIRECTORY
+    contentBase: EXAMPLES_DIRECTORY,
+		// enable HMR
+		hot: true,
+		// embed the webpack-dev-server runtime into the bundle
+		inline: true,
+		// serve index.html in place of 404 responses to allow HTML5 history
+		historyApiFallback: true,
+		port: 3000
   },
-  entry: {
-    example: EXAMPLES_DIRECTORY
-  },
+  devtool: 'source-map',
+  entry: [
+ 		'webpack-dev-server/client?http://localhost:3000',
+		'webpack/hot/only-dev-server',
+		'react-hot-loader/patch',
+    EXAMPLES_DIRECTORY
+  ],
   module: {
     loaders: [
       {
@@ -24,8 +35,9 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   resolve: {
     alias: {

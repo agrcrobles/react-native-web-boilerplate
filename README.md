@@ -1,22 +1,17 @@
-## Overview
-An easy and simple way to configure react-native-web with babel and webpack.
+## Boilerplate Overview
+An easy and simple way to configure react-native-web with webpack-dev-server and react-hot-loader.
 
 Note: TicTacToe.js is taken simply as a working example
-
-## Motivation
-
-https://github.com/necolas/react-native-web/issues/157
 
 ## Installation
 
 1. `npm start`
-2. Open `http://localhost:8080/``
+2. Open `http://localhost:3000/``
 
 ## API Reference
 
-1. https://babeljs.io/
 2. https://github.com/necolas/react-native-web
-3. https://webpack.github.io/
+3. https://github.com/gaearon/react-hot-loader
 
 ## Contributors
 
