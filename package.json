@@ -1,7 +1,7 @@
 {
   "name": "react-native-web-webpack-starter",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "react-native-web starter",
   "main": "index.js",
   "scripts": {
     "test": "flow",
@@ -11,18 +11,17 @@
   "author": "agrcrobles@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.2.0",
-    "react-native-web": "0.0.34",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1",
-    "babel-core": "6.9.1",
-    "babel-loader": "6.2.4",
-    "babel-preset-es2015": "6.9.0",
-    "babel-preset-react": "6.5.0",
-    "babel-preset-stage-1": "6.9.0"
+    "react": "^15.3.2",
+    "react-native-web": "0.0.55"
   },
   "devDependencies": {
-    "babel-plugin-transform-flow-strip-types": "^6.8.0",
-    "flow-bin": "0.27.0"
+    "flow-bin": "0.33.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
