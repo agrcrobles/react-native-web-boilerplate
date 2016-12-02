@@ -10,7 +10,7 @@
   "author": "agrcrobles@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.3.2",
+    "react": "15.3.2",
     "react-native-web": "0.0.55"
   },
   "devDependencies": {

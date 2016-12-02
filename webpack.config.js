@@ -1,10 +1,9 @@
 const webpack = require('webpack');
-
-const EXAMPLES_DIRECTORY = __dirname;
+const path = require('path');
 
 module.exports = {
   devServer: {
-    contentBase: EXAMPLES_DIRECTORY,
+    contentBase: path.join(__dirname, "build"),
     // enable HMR
     hot: true,
     // embed the webpack-dev-server runtime into the bundle
@@ -18,7 +17,7 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
-    EXAMPLES_DIRECTORY
+    path.join(__dirname, "src", "index.js")
   ],
   module: {
     loaders: [
@@ -31,7 +30,8 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'build/bundle.js'
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
