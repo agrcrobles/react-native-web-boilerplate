@@ -7,10 +7,15 @@ An easy and simple way to configure react-native-web with webpack-dev-server and
 
 Note: TicTacToe.js is taken simply as a working example
 
-## Quick start
+## Flow
 
-1. `npm start`
-2. Open `http://localhost:3000/`
+Comming soon...
+
+## Quick start
+1. git clone --depth 1 https://github.com/agrcrobles/react-native-web-webpack-starter.git
+2. cd react-native-web-webpack-starter
+3. `npm start`
+4. Open `http://localhost:3000/`
 
 ## API Reference
 
