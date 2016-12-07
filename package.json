@@ -4,13 +4,14 @@
   "description": "react-native-web starter",
   "main": "src/index.js",
   "scripts": {
-    "test": "eslint .",
-    "start": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "test": "eslint . --ignore-path .gitignore",
+    "dev": "webpack-dev-server --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.prod.config.js"
   },
   "author": "agrcrobles@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.4",
     "react": "15.3.2",
     "react-native-web": "0.0.55"
   },
