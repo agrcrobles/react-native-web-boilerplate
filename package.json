@@ -12,10 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "react": "15.3.2",
-    "react-native-web": "0.0.55",
-    "webpack-dev-server": "^1.16.2"
+    "react-native-web": "0.0.55"
   },
   "devDependencies": {
+    "webpack-dev-server": "^1.16.2",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.8",
