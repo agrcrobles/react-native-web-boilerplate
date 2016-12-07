@@ -11,9 +11,9 @@
   "author": "agrcrobles@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4",
     "react": "15.3.2",
-    "react-native-web": "0.0.55"
+    "react-native-web": "0.0.55",
+    "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -25,7 +25,6 @@
     "eslint": "^3.11.1",
     "eslint-plugin-react": "^6.7.1",
     "react-hot-loader": "3.0.0-beta.5",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^1.13.3"
   }
 }
