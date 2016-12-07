@@ -1,3 +1,6 @@
 node_modules
 node-debug.log
 build/bundle.js
+build/bundle.js.map
+dist/bundle.js
+dist/bundle.js.map

@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "eslint .",
-    "start": "webpack-dev-server --config webpack.config.js"
+    "start": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "author": "agrcrobles@gmail.com",
   "license": "ISC",
