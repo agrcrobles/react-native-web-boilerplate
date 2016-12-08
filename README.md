@@ -16,10 +16,15 @@ Note: TicTacToe.js is taken simply as a working example
 Comming soon...
 
 ## Quick start
+
 1. `git clone --depth 1 https://github.com/agrcrobles/react-native-web-webpack-starter.git`
 2. `cd react-native-web-webpack-starter`
 3. `npm start`
 4. Open `http://localhost:3000/`
+
+## Working sample
+
+https://rn-web-webpack-starter.herokuapp.com/
 
 ## API Reference
 
