@@ -5,24 +5,27 @@
 ## Overview
 An easy and simple way to configure react-native-web with webpack-dev-server and react-hot-loader.
 
-Note: TicTacToe.js is taken simply as a working example
+Note: `TicTacToe.js` is taken simply as a working file example
 
 ## eslint
 
-`npm test`
+```
+npm test
+```
 
-## Flow
+## Redux && Flow
 
 Comming soon...
 
 ## Quick start
+```
+git clone --depth 1 https://github.com/agrcrobles/react-native-web-webpack-starter.git
+cd react-native-web-webpack-starter
+npm start
+```
+2. Open `http://localhost:3000/`
 
-1. `git clone --depth 1 https://github.com/agrcrobles/react-native-web-webpack-starter.git`
-2. `cd react-native-web-webpack-starter`
-3. `npm start`
-4. Open `http://localhost:3000/`
-
-## Working sample
+## Working sample 
 
 https://rn-web-webpack-starter.herokuapp.com/
 
@@ -31,6 +34,6 @@ https://rn-web-webpack-starter.herokuapp.com/
 1. [React Native for Web](https://github.com/necolas/react-native-web)
 2. [React Hot Loader](https://github.com/gaearon/react-hot-loader)
 
-## License
+## CONTRIBUTING
 
-A short snippet describing the license (MIT, Apache, etc.)
+PR, stars ✭ and issue reporting are always welcome!
