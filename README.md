@@ -23,7 +23,7 @@ git clone --depth 1 https://github.com/agrcrobles/react-native-web-webpack-start
 cd react-native-web-webpack-starter
 npm start
 ```
-2. Open `http://localhost:3000/`
+Open `http://localhost:3000/`
 
 ## Working sample 
 
