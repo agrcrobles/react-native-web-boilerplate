@@ -1,9 +1,10 @@
-# React Native for Web + Hot Loader Simple Starter.
+# React Native for Web + Redux + Hot Loader Simple Starter.
 
 ![Build Status](https://api.travis-ci.org/agrcrobles/react-native-web-webpack-starter.svg?master)
+[![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://rn-web-webpack-starter.herokuapp.com/)
 
 ## Overview
-An easy and simple way to configure react-native-web with webpack-dev-server and react-hot-loader.
+An easy and simple way to configure react-native-web with webpack-dev-server, react-hot-loader and redux.
 
 Note: `TicTacToe.js` is taken simply as a working file example
 
@@ -13,7 +14,7 @@ Note: `TicTacToe.js` is taken simply as a working file example
 npm test
 ```
 
-## Redux && Flow
+## Flow
 
 Comming soon...
 
@@ -25,7 +26,7 @@ npm start
 ```
 Open `http://localhost:3000/`
 
-## Working sample 
+## Working sample
 
 https://rn-web-webpack-starter.herokuapp.com/
 
@@ -33,6 +34,7 @@ https://rn-web-webpack-starter.herokuapp.com/
 
 1. [React Native for Web](https://github.com/necolas/react-native-web)
 2. [React Hot Loader](https://github.com/gaearon/react-hot-loader)
+3. [Redux] (https://github.com/reactjs/redux)
 
 ## CONTRIBUTING
 
