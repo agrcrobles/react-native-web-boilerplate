@@ -22,13 +22,10 @@ Comming soon...
 ```
 git clone --depth 1 https://github.com/agrcrobles/react-native-web-webpack-starter.git
 cd react-native-web-webpack-starter
+yarn
 npm start
 ```
 Open `http://localhost:3000/`
-
-## Working sample
-
-https://rn-web-webpack-starter.herokuapp.com/
 
 ## API Reference
 
