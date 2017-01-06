@@ -21,8 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
-    "react": "15.3.2",
-    "react-native-web": "0.0.55"
+    "react": "15.4.1",
+    "react-native-web": "0.0.63"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
