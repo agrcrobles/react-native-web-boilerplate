@@ -10,6 +10,8 @@ Note: `TicTacToe.js` is taken simply as a working file example
 
 ## eslint
 
+Implemented `eslint-config-airbnb` react [rules](https://github.com/airbnb/javascript)
+
 ```
 npm test
 ```
@@ -29,9 +31,11 @@ Open `http://localhost:3000/`
 
 ## API Reference
 
-1. [React Native for Web](https://github.com/necolas/react-native-web)
-2. [React Hot Loader](https://github.com/gaearon/react-hot-loader)
-3. [Redux] (https://github.com/reactjs/redux)
+1. [React](https://facebook.github.io/react/)
+2. [React Native for Web](https://github.com/necolas/react-native-web)
+3. [React Hot Loader](https://github.com/gaearon/react-hot-loader)
+4. [Redux](https://github.com/reactjs/redux)
+5. [Lint](http://eslint.org/)
 
 ## CONTRIBUTING
 

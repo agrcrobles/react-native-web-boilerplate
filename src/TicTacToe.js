@@ -14,10 +14,9 @@
  * @providesModule TicTacToeApp
  * @flow
  */
-'use strict';
-
 const React = require('react');
 const ReactNative = require('react-native');
+
 const {
   AppRegistry,
   StyleSheet,
@@ -33,9 +32,9 @@ class Board {
   constructor() {
     const size = 3;
     const grid = Array(size);
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < size; i += 1) {
       const row = Array(size);
-      for (let j = 0; j < size; j++) {
+      for (let j = 0; j < size; j += 1) {
         row[j] = 0;
       }
       grid[i] = row;
@@ -55,14 +54,14 @@ class Board {
   }
 
   winner(): ?number {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i += 1) {
       if (this.grid[i][0] !== 0 && this.grid[i][0] === this.grid[i][1] &&
           this.grid[i][0] === this.grid[i][2]) {
         return this.grid[i][0];
       }
     }
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i += 1) {
       if (this.grid[0][i] !== 0 && this.grid[0][i] === this.grid[1][i] &&
           this.grid[0][i] === this.grid[2][i]) {
         return this.grid[0][i];
@@ -83,8 +82,8 @@ class Board {
   }
 
   tie(): boolean {
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
+    for (let i = 0; i < 3; i += 1) {
+      for (let j = 0; j < 3; j += 1) {
         if (this.grid[i][j] === 0) {
           return false;
         }
@@ -132,10 +131,11 @@ const Cell = React.createClass({
     return (
       <TouchableHighlight
         onPress={this.props.onPress}
-        underlayColor='transparent'
-        activeOpacity={0.5}>
-        <View style={[ styles.cell, this.cellStyle() ]}>
-          <Text style={[ styles.cellText, this.textStyle() ]}>
+        underlayColor={'transparent'}
+        activeOpacity={0.5}
+      >
+        <View style={[styles.cell, this.cellStyle()]}>
+          <Text style={[styles.cellText, this.textStyle()]}>
             {this.textContents()}
           </Text>
         </View>
@@ -144,7 +144,7 @@ const Cell = React.createClass({
   }
 });
 
-const GameEndOverlay = React.createClass({
+const GameEndOverlay = class GameEndOverlay extends React.Component {
   render() {
     const board = this.props.board;
 
@@ -158,7 +158,7 @@ const GameEndOverlay = React.createClass({
     if (tie) {
       message = 'It\'s a tie!';
     } else {
-      message = (winner === 1 ? 'X' : 'O') + ' wins!';
+      message = (winner === 1 ? 'X wins' : 'O wins');
     }
 
     return (
@@ -166,8 +166,9 @@ const GameEndOverlay = React.createClass({
         <Text style={styles.overlayMessage}>{message}</Text>
         <TouchableHighlight
           onPress={this.props.onRestart}
-          underlayColor='transparent'
-          activeOpacity={0.5}>
+          underlayColor={'transparent'}
+          activeOpacity={0.5}
+        >
           <View style={styles.newGame}>
             <Text style={styles.newGameText}>New Game</Text>
           </View>
@@ -175,7 +176,7 @@ const GameEndOverlay = React.createClass({
       </View>
     );
   }
-});
+};
 
 const TicTacToeApp = React.createClass({
   getInitialState() {
@@ -203,10 +204,10 @@ const TicTacToeApp = React.createClass({
 
   render() {
     const rows = this.state.board.grid.map((cells, row) =>
-      <View key={'row' + row} style={styles.row}>
+      <View key={`row${row}`} style={styles.row}>
         {cells.map((player, col) =>
           <Cell
-            key={'cell' + col}
+            key={`cell${col}`}
             player={player}
             onPress={this.handleCellPress.bind(this, row, col)}
           />

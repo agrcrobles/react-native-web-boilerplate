@@ -1,13 +1,13 @@
 import { AppRegistry } from 'react-native';
-const React = require('react');
 
 import { Provider, connect } from 'react-redux';
 
 import { createStore } from 'redux';
 
+const React = require('react');
 const TicTacToe = require('./TicTacToe');
 
-const reducers = function noop(state, action) {
+const reducers = function noop(state) {
   return state;
 };
 
