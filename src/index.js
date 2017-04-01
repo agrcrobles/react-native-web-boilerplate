@@ -9,13 +9,12 @@ import {
   TouchableOpacity,
   Text,
   View,
+  Animated
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import Banner from './Banner';
-import CustomTabs from './CustomTabs';
 import Drawer from './Drawer';
-import ModalStack from './ModalStack';
 import StacksInTabs from './StacksInTabs';
 import SimpleStack from './SimpleStack';
 import SimpleTabs from './SimpleTabs';
@@ -25,67 +24,117 @@ const ExampleRoutes = {
     name: 'Stack Example',
     description: 'A card stack',
     screen: SimpleStack,
+    icon: "extension"
   },
   SimpleTabs: {
     name: 'Tabs Example',
     description: 'Tabs following platform conventions',
     screen: SimpleTabs,
+    icon: "explore"
   },
   Drawer: {
     name: 'Drawer Example',
     description: 'Android-style drawer navigation',
     screen: Drawer,
-  },
-  CustomTabs: {
-    name: 'Custom Tabs',
-    description: 'Custom tabs with tab router',
-    screen: CustomTabs,
-  },
-  ModalStack: {
-    name: Platform.OS === 'ios' ? 'Modal Stack Example' : 'Stack with Dynamic Header',
-    description: Platform.OS === 'ios' ? 'Stack navigation with modals' : 'Dynamically showing and hiding the header',
-    screen: ModalStack,
+    icon: "view-column"
   },
   StacksInTabs: {
     name: 'Stacks in Tabs',
     description: 'Nested stack navigation in tabs',
     screen: StacksInTabs,
-  },
-  LinkStack: {
-    name: 'Link in Stack',
-    description: 'Deep linking into a route in stack',
-    screen: SimpleStack,
-    path: 'people/Jordan',
-  },
-  LinkTabs: {
-    name: 'Link to Settings Tab',
-    description: 'Deep linking into a route in tab',
-    screen: SimpleTabs,
-    path: 'settings',
+    icon: "view-agenda"
   },
 };
 
-const MainScreen = ({ navigation }) => (
-  <ScrollView>
-    <Banner />
-    {Object.keys(ExampleRoutes).map((routeName: string) =>
-      <TouchableOpacity
-        key={routeName}
-        onPress={() => {
-          const { path, params, screen } = ExampleRoutes[routeName];
-          const { router } = screen;
-          const action = path && router.getActionForPathAndParams(path, params);
-          navigation.navigate(routeName, {}, action);
-        }}
-      >
-        <View style={styles.item}>
-          <Text style={styles.title}>{ExampleRoutes[routeName].name}</Text>
-          <Text style={styles.description}>{ExampleRoutes[routeName].description}</Text>
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
+import TouchableBounce from './TouchableBounce';
+
+type State = {
+  fadeAnim: any
+}
+
+const Item = ({ navigation, routes, routeName }) =>
+  <View>
+    <TouchableBounce
+      style={main.square}
+      onPressAnimationComplete={() => {
+        const { path, params, screen } = routes[routeName];
+        const { router } = screen;
+        const action = path && router.getActionForPathAndParams(path, params);
+        navigation.navigate(routeName, {}, action);
+      }}
+    >
+      <MaterialIcons
+        name={routes[routeName].icon}
+        size={72}
+        style={{ color: '#4B0082' }}
+      />
+    </TouchableBounce>
+    <View style={{ padding: 10, alignItems: 'center' }}>
+      <Text style={styles.title}>{routes[routeName].name}</Text>
+      <Text style={styles.description}>{routes[routeName].description}</Text>
+    </View>
+  </View>;
+
+class MainScreen extends React.Component {
+  state: State;
+  constructor(props) {
+    super(props);
+      this.state = {
+      fadeAnim: new Animated.Value(0),
+    };
+  }
+  componentDidMount() {
+      Animated.timing(
+        this.state.fadeAnim, {
+          toValue: 1,
+          delay: 2000
+        }
+      ).start();
+  }
+  render () {
+    return (
+      <ScrollView>
+        <Banner />
+        <View style={main.container}>
+          {Object.keys(ExampleRoutes).map((routeName: string) =>
+            <View key={routeName} style={main.squareContainer}>
+              <Animated.View style={{opacity: this.state.fadeAnim}}>
+                <Item
+                  routeName={routeName}
+                  routes={ExampleRoutes}
+                  navigation={this.props.navigation}
+                />
+              </Animated.View>
+            </View>
+          )}
         </View>
-      </TouchableOpacity>
-    )}
-  </ScrollView>
-);
+      </ScrollView>
+    );
+  }
+}
+
+const main = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap'
+  },
+  square: {
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 60,
+    paddingVertical: 20
+  },
+  squareContainer: {
+    alignItems: 'center',
+    flexBasis: '50%',
+    padding: 30
+  }
+});
+
 
 const AppNavigator = StackNavigator({
   ...ExampleRoutes,
@@ -95,16 +144,10 @@ const AppNavigator = StackNavigator({
 }, {
   initialRouteName: 'Index',
   headerMode: 'none',
-
-  /*
-   * Use modal on iOS because the card mode comes from the right,
-   * which conflicts with the drawer example gesture
-   */
-  mode: Platform.OS === 'ios' ? 'modal' : 'card',
+  mode: 'modal'
 });
 
 export default AppNavigator;
-// export default () => <AppNavigator />;
 
 const styles = StyleSheet.create({
   item: {
@@ -113,6 +156,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: '#ddd',
+    flex: 1
   },
   image: {
     width: 120,

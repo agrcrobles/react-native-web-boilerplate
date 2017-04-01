@@ -13,18 +13,26 @@ module.exports = {
     historyApiFallback: true,
     port: 3000
   },
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
-    path.join(__dirname, '../index.js')
+    path.join(__dirname, '../index.web.js')
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules(?!\/react-native-vector-icons)/,
+        include: [
+          path.resolve(__dirname, "..", "index.web.js"),
+          path.resolve(__dirname, "..", "src"),
+          path.resolve(__dirname, "..", "navigation"),
+          path.resolve(__dirname, "..", "reducers"),
+          path.resolve(__dirname, "..", "src"),
+          path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
+          path.resolve(__dirname, "../node_modules/react-native-touchable-bounce")
+        ],
         loader: 'babel-loader?+cacheDirectory'
       },
       {

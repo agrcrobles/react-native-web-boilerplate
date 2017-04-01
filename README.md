@@ -1,23 +1,19 @@
 # React Native for Web Boilerplate
 
-> Includes built in navigators from react-navigation and react-native-vector-icons
+> It includes built in navigators from react-navigation and react-native-vector-icons
 
 ![Build Status](https://api.travis-ci.org/agrcrobles/react-native-web-webpack-starter.svg?master)
 [![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://react-navigation-playground.herokuapp.com/)
 
 ## Overview
 
-An easy and simple way to configure react-native-web and redux with react-navigation.
-
-## eslint
-
-Implemented `eslint-config-airbnb` react [rules](https://github.com/airbnb/javascript)
-
-```
-npm test
-```
+An easy and simple way to configure react-native-web with react-navigation.
 
 ## react-native-vector-icons
+
+> Supported
+
+## flow
 
 > Supported
 
@@ -25,7 +21,7 @@ npm test
 
 ```
 git clone --depth 1 https://github.com/agrcrobles/react-native-web-boilerplate.git
-cd react-native-web-webpack-starter
+cd react-native-web-boilerplate
 yarn
 yarn web
 ```
@@ -34,12 +30,17 @@ Open `http://localhost:3000/`
 
 ## API Reference
 
-1. [React](https://facebook.github.io/react/)
-2. [React Hot Loader](https://github.com/gaearon/react-hot-loader)
-3. [React Navigation](https://github.com/react-community/react-navigation)
-4. [Redux](https://github.com/reactjs/redux)
-5. [Lint](http://eslint.org/)
+1. [react](https://facebook.github.io/react/)
+2. [redux](https://github.com/reactjs/redux)
+3. [react-hot-loader](https://github.com/gaearon/react-hot-loader)
+4. [react-navigation](https://github.com/react-community/react-navigation)
+5. [react-navigation-polyfill](https://github.com/agrcrobles/react-navigation-polyfill)
+6. [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
 ## CONTRIBUTING
 
-PR, stars ✭ and issue reporting are always welcome!
+PR, stars ✭ and issue reporting, welcome!
+
+## LICENSE
+
+MIT

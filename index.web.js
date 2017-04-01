@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 
 import { AppRegistry } from 'react-native';
@@ -19,6 +21,7 @@ const renderApp = () => <Provider store={store}>
 AppRegistry.registerComponent('ReactNavigationExamples', () => renderApp);
 
 if (module.hot) {
+  // $FlowFixMe
   module.hot.accept();
   const nextReducer = require('./reducers').default; // eslint-disable-line
   store.replaceReducer(nextReducer);

@@ -1,48 +1,40 @@
 {
   "name": "react-native-web-boilerplate",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "react-native-web boilerplate",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "eslint . --ignore-path .gitignore",
-    "web": "webpack-dev-server --config web/webpack.config.js"
+  "engines": {
+    "node": ">=6.0.0 <7"
   },
-  "homepage": "https://github.com/agrcrobles/react-native-web-boilerplate",
-  "url": "git+https://github.com/agrcrobles/react-native-web-boilerplate",
-  "keywords": [
-    "react",
-    "webpack",
-    "react-hot-loader",
-    "react-native-starter",
-    "react-navigation",
-    "react-navigation-web",
-    "react-navigation-polyfill",
-    "es2015",
-    "javascript"
-  ],
   "author": "agrcrobles@gmail.com",
   "license": "MIT",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "web": "webpack-dev-server --config web/webpack.config.js",
+    "flow": "flow"
+  },
   "dependencies": {
-    "react": "15.4.2",
-    "react-native-web": "0.0.79",
-    "react-navigation-web": "git+https://github.com/agrcrobles/react-navigation-web.git",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-native": "0.40.0",
+    "react-native-touchable-bounce": "^1.0.3",
     "react-native-vector-icons": "^4.0.0",
+    "react-native-web": "0.0.80",
+    "react-navigation": "1.0.0-beta.7",
+    "react-navigation-web": "git+https://github.com/agrcrobles/react-navigation-web.git",
     "react-redux": "^5.0.1",
-    "redux": "^3.6.0",
-    "webpack": "^2.3.0"
+    "redux": "^3.6.0"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.3.0",
-    "babel-preset-react-native": "^1.9.1",
-    "eslint": "^3.11.1",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.7.1",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "6.1.2",
+    "babel-loader": "^6.2.10",
+    "babel-preset-react-native": "1.9.1",
+    "file-loader": "^0.10.0",
+    "flow-bin": "^0.36.0",
     "react-hot-loader": "3.0.0-beta.6",
-    "url-loader": "^0.5.8",
+    "react-native-cli": "1.0.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.3.0",
     "webpack-dev-server": "^2.4.2"
   }
 }

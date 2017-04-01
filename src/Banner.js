@@ -12,11 +12,7 @@ import {
 
 const Banner = () => (
   <View style={styles.banner}>
-    <Image
-      source={require('./assets/NavLogo.png')}
-      style={styles.image}
-    />
-    <Text style={styles.title}>React Navigation Examples</Text>
+    <Text style={styles.title}>React Navigation... more examples</Text>
   </View>
 );
 
@@ -26,7 +22,7 @@ const styles = StyleSheet.create({
   banner: {
     backgroundColor: '#673ab7',
     flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'space-around',
     padding: 16,
     marginTop: Platform.OS === 'ios' ? 20 : 0,
   },

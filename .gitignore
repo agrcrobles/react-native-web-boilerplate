@@ -1,5 +1,9 @@
+# node
 node_modules
 node-debug.log
-npm-debug.log
 
+npm-debug.log
+node-debug.log
+
+# builds
 bundle.js
