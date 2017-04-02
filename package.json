@@ -19,7 +19,7 @@
     "react-native-vector-icons": "^4.0.0",
     "react-native-web": "0.0.80",
     "react-navigation": "1.0.0-beta.7",
-    "react-navigation-web": "git+https://github.com/agrcrobles/react-navigation-web.git",
+    "react-navigation-polyfill": "^0.3.1",
     "react-redux": "^5.0.1",
     "redux": "^3.6.0"
   },

@@ -61,7 +61,7 @@ module.exports = {
     ],
     alias: {
       'react-native': 'react-native-web',
-      'react-navigation': 'react-navigation-web'
+      'react-navigation': 'react-navigation-polyfill'
     }
   }
 };

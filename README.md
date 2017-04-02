@@ -1,7 +1,5 @@
 # React Native for Web Boilerplate
 
-> It includes built in navigators from react-navigation and react-native-vector-icons
-
 ![Build Status](https://api.travis-ci.org/agrcrobles/react-native-web-webpack-starter.svg?master)
 [![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://react-navigation-playground.herokuapp.com/)
 
@@ -13,9 +11,15 @@ An easy and simple way to configure react-native-web with react-navigation.
 
 > Supported
 
-## flow
+## Flowtypes
 
-> Supported
+> No Errors!
+
+## Features
+
+ - built in navigators from react-navigation
+ - react-native-vector-icons
+ - touchable bounce
 
 ## Quick start
 
