@@ -5,32 +5,46 @@
 
 ## Overview
 
-An easy and simple way to configure react-native-web with react-navigation.
-
-## react-native-vector-icons
-
-> Supported
+An easy and simple way to configure `react-native-web` with `react-navigation` with `react-navigation-polyfill`
 
 ## Flowtypes
 
 > No Errors!
 
-## Features
+## Some features cross platform
 
- - built in navigators from react-navigation
+ - built in navigators
  - react-native-vector-icons
  - touchable bounce
 
 ## Quick start
-
 ```
 git clone --depth 1 https://github.com/agrcrobles/react-native-web-boilerplate.git
+```
+
+### Web
+```
 cd react-native-web-boilerplate
 yarn
 yarn web
 ```
-
 Open `http://localhost:3000/`
+
+### Desktop with electron
+
+Run web and then...
+
+```
+cd electron
+npm i
+npm start
+```
+
+### Native packager
+
+```
+yarn start
+```
 
 ## API Reference
 
@@ -40,6 +54,7 @@ Open `http://localhost:3000/`
 4. [react-navigation](https://github.com/react-community/react-navigation)
 5. [react-navigation-polyfill](https://github.com/agrcrobles/react-navigation-polyfill)
 6. [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+7. [electron](http://electron.atom.io)
 
 ## CONTRIBUTING
 

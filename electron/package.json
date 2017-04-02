@@ -1,0 +1,17 @@
+{
+  "name": "react-native-electron-boilerplate",
+  "description": "react-native-electron boilerplate",
+  "version": "0.1.0",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "alejandro garcia <agrcrobles@gmail.com>",
+  "scripts": {
+    "start": "NODE_ENV=development electron -r babel-register . --enable-logging"
+  },
+  "dependencies": {
+    "babel-register": "^6.24.0"
+  },
+  "devDependencies": {
+    "electron": "^1.4.3"
+  }
+}
