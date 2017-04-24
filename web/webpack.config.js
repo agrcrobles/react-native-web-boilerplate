@@ -13,7 +13,7 @@ module.exports = {
     historyApiFallback: true,
     port: 3000
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
@@ -25,13 +25,10 @@ module.exports = {
       {
         test: /\.js$/,
         include: [
-          path.resolve(__dirname, "..", "index.web.js"),
-          path.resolve(__dirname, "..", "src"),
-          path.resolve(__dirname, "..", "navigation"),
-          path.resolve(__dirname, "..", "reducers"),
-          path.resolve(__dirname, "..", "src"),
-          path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
-          path.resolve(__dirname, "../node_modules/react-native-touchable-bounce")
+          path.resolve(__dirname, '..', 'index.web.js'),
+          path.resolve(__dirname, '..', 'src'),
+          path.resolve(__dirname, '../node_modules/react-native-vector-icons'),
+          path.resolve(__dirname, '../node_modules/react-native-tab-view')
         ],
         loader: 'babel-loader?+cacheDirectory'
       },
@@ -61,7 +58,7 @@ module.exports = {
     ],
     alias: {
       'react-native': 'react-native-web',
-      'react-navigation': 'react-navigation-polyfill'
+      'react-navigation': 'react-navigation/lib/react-navigation.js',
     }
   }
 };

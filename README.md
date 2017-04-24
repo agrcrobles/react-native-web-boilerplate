@@ -1,21 +1,19 @@
-# React Native for Web Boilerplate
-
-![Build Status](https://api.travis-ci.org/agrcrobles/react-native-web-webpack-starter.svg?master)
-[![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://react-navigation-playground.herokuapp.com/)
+# React Native for Web - Stateless Boilerplate
 
 ## Overview
 
-An easy and simple way to configure `react-native-web` with `react-navigation` with `react-navigation-polyfill`
+An easy and simple way to configure `react-native-web` and `react-navigation`.
+For a thorough discussion, please read the following [blog post](https://medium.com/@locropulenton/navigating-in-all-platforms-with-react-navigation-673e9a6e963) about navigating in all platforms with react-navigation.
 
-## Flowtypes
+## Checking flow for iOS platform
 
 > No Errors!
 
-## Some features cross platform
+## modules cross platform
 
- - built in navigators
- - react-native-vector-icons
- - touchable bounce
+ - [built in navigators](https://github.com/react-community/react-navigation)
+ - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+ - [touchable bounce](https://github.com/grabbou/react-native-touchable-bounce)
 
 ## Quick start
 ```
@@ -32,8 +30,6 @@ Open `http://localhost:3000/`
 
 ### Desktop with electron
 
-Run web and then...
-
 ```
 cd electron
 npm i
@@ -46,15 +42,11 @@ npm start
 yarn start
 ```
 
-## API Reference
+## Related projects
 
-1. [react](https://facebook.github.io/react/)
-2. [redux](https://github.com/reactjs/redux)
-3. [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-4. [react-navigation](https://github.com/react-community/react-navigation)
-5. [react-navigation-polyfill](https://github.com/agrcrobles/react-navigation-polyfill)
-6. [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
-7. [electron](http://electron.atom.io)
+1. https://github.com/ericwooley/react-nativeish
+2. https://github.com/grabcode/react-native-web-starter
+
 
 ## CONTRIBUTING
 

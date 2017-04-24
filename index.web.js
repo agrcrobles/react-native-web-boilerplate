@@ -4,31 +4,23 @@ import React from 'react';
 
 import { AppRegistry } from 'react-native';
 
-import { Provider } from 'react-redux';
+import Navigation from './src/navigation';
 
-import { createStore } from 'redux';
+import { AppContainer } from 'react-hot-loader';
 
-import reducers from './reducers';
-
-import Navigation from './navigation';
-
-const store = createStore(reducers);
-
-const renderApp = () => <Provider store={store}>
+const renderApp = () => <AppContainer>
   <Navigation />
-</Provider>;
+</AppContainer>;
 
 AppRegistry.registerComponent('ReactNavigationExamples', () => renderApp);
 
 if (module.hot) {
   // $FlowFixMe
   module.hot.accept();
-  const nextReducer = require('./reducers').default; // eslint-disable-line
-  store.replaceReducer(nextReducer);
 
-  const renderHotApp = () => <Provider store={store}>
+  const renderHotApp = () => <AppContainer>
     <Navigation />
-  </Provider>;
+  </AppContainer>;
 
   AppRegistry.registerComponent('ReactNavigationExamples', () => renderHotApp);
 }
