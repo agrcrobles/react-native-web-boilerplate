@@ -12,7 +12,7 @@ const renderApp = () => <AppContainer>
   <Navigation />
 </AppContainer>;
 
-AppRegistry.registerComponent('ReactNavigationExamples', () => renderApp);
+AppRegistry.registerComponent('ReactNativeWebBoilerplate', () => renderApp);
 
 if (module.hot) {
   // $FlowFixMe
@@ -22,9 +22,9 @@ if (module.hot) {
     <Navigation />
   </AppContainer>;
 
-  AppRegistry.registerComponent('ReactNavigationExamples', () => renderHotApp);
+  AppRegistry.registerComponent('ReactNativeWebBoilerplate', () => renderHotApp);
 }
 
-AppRegistry.runApplication('ReactNavigationExamples', {
+AppRegistry.runApplication('ReactNativeWebBoilerplate', {
   rootTag: document.getElementById('root')
 });
