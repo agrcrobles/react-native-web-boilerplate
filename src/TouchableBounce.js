@@ -9,7 +9,7 @@
 'use strict';
 
 var React = require('react');
-var { Animated, Touchable } = require('react-native');
+var { Animated, Touchable, StyleSheet, Platform, } = require('react-native');
 
 var EdgeInsetsPropType = React.PropTypes.shape({
   top: React.PropTypes.number,
@@ -131,7 +131,7 @@ var TouchableBounce = React.createClass({
       <Animated.View
         style={[{transform: [{
           scale: this.state.scale
-        }]}, { cursor: 'pointer' }, this.props.style]}
+        }]}, styles.view, this.props.style]}
         accessible={true}
         accessibilityLabel={this.props.accessibilityLabel}
         accessibilityComponentType={this.props.accessibilityComponentType}
@@ -150,4 +150,13 @@ var TouchableBounce = React.createClass({
   }
 });
 
+const styles = StyleSheet.create({
+  view: {
+    ...Platform.select({
+      web: {
+        cursor: 'pointer',
+      },
+    }),
+  },
+});
 module.exports = TouchableBounce;

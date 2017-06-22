@@ -125,7 +125,6 @@ const main = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 60,
     paddingVertical: 20
   },
   squareContainer: {
