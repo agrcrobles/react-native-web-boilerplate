@@ -5,7 +5,7 @@
 An easy and simple way to configure `react-native-web` and `react-navigation`.
 For a thorough discussion, please read the following [blog post](https://medium.com/@locropulenton/navigating-in-all-platforms-with-react-navigation-673e9a6e963) about navigating in all platforms with react-navigation.
 
-## Checking flow for iOS platform
+## Checking flow for IOS platform
 
 > No Errors!
 
@@ -36,17 +36,25 @@ npm i
 npm start
 ```
 
-### Native packager
+### Android
 
 ```
 yarn start
+yarn android
 ```
 
-## Related projects
+### IOS
 
-1. https://github.com/ericwooley/react-nativeish
-2. https://github.com/grabcode/react-native-web-starter
+```
+yarn start
+yarn ios
+```
 
+### More information
+
+ - babel preset: `babel-preset-react-native` is recommended in mobile and in web ( and it hot reloads! )
+ - packager: metro bundler packager is used
+ - jest: experimental
 
 ## CONTRIBUTING
 
