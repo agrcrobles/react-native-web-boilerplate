@@ -21,7 +21,8 @@
     "react-native": "0.45.1",
     "react-native-vector-icons": "^4.2.0",
     "react-native-web": "0.0.x",
-    "react-navigation": "^1.0.0-beta.11"
+    "react-navigation": "^1.0.0-beta.11",
+    "tricky-components": "0.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

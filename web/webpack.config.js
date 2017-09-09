@@ -28,7 +28,8 @@ module.exports = {
           path.resolve(__dirname, '..', 'index.web.js'),
           path.resolve(__dirname, '..', 'src'),
           path.resolve(__dirname, '../node_modules/react-native-vector-icons'),
-          path.resolve(__dirname, '../node_modules/react-native-tab-view')
+          path.resolve(__dirname, '../node_modules/react-native-tab-view'),
+          path.resolve(__dirname, '../node_modules/tricky-components')
         ],
         loader: 'babel-loader?+cacheDirectory'
       },

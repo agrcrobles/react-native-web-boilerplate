@@ -11,9 +11,10 @@ For a thorough discussion, please read the following [blog post](https://medium.
 
 ## modules cross platform
 
- - [built in navigators](https://github.com/react-community/react-navigation)
- - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
- - [touchable bounce](https://github.com/grabbou/react-native-touchable-bounce)
+ - [built in navigators on web](https://github.com/react-community/react-navigation) # Use it your on own risk.
+ - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) # Fully supported
+ - [touchable bounce](https://github.com/grabbou/react-native-touchable-bounce) # It is not added in react-native-web
+ - [tricky-components](https://www.npmjs.com/package/tricky-components) Tricky components to test a cross platform app
 
 ## Quick start
 ```

@@ -12,7 +12,7 @@ import {
 
 const Banner = () => (
   <View style={styles.banner}>
-    <Text style={styles.title}>React Navigation... more examples</Text>
+    <Text style={styles.title}>React Native Web Boilerplate</Text>
   </View>
 );
 

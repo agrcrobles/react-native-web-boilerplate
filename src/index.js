@@ -13,11 +13,13 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import Banner from './Banner';
-import Drawer from './Drawer';
-import StacksInTabs from './StacksInTabs';
-import SimpleStack from './SimpleStack';
-import SimpleTabs from './SimpleTabs';
+import {
+  Banner,
+  Drawer,
+  StacksInTabs,
+  SimpleTabs,
+  SimpleStack
+} from 'tricky-components';
 
 const ExampleRoutes = {
   SimpleStack: {
