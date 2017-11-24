@@ -1,4 +1,6 @@
-# React Native for Web - Stateless Boilerplate
+# React Native for Web - Stateless Boilerplate for React 15
+
+> For React 16 see [react-native-web-fiber-boilerplate](https://github.com/agrcrobles/react-native-web-fiber-boilerplate)
 
 ## Overview
 
