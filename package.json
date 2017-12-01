@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "react-native-web boilerplate",
   "engines": {
-    "node": ">=6.0.0 <7"
+    "node": ">=6.0.0"
   },
   "author": "agrcrobles@gmail.com",
   "license": "MIT",
